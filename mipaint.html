@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi paint</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        canvas{
+            background: #def;
+            border: 1px solid #aaa
+        }
+    </style>
+</head>
+<body>
+    <canvas width="480" height="320"> </canvas>
+    <script>
+        var mausepres = false
+        $(function(){
+            var dibujo = $('canvas')[0]
+            var contexto = dibujo.getContext('2d')
+
+            $('canvas').mousemove(function (e) { 
+                // values: e.clientX, e.clientY, e.pageX, e.pageY
+                var xpos = e.pageX - dibujo.offsetLeft
+                var ypos = e.pageY - dibujo.offsetTop
+
+                
+                if(mausepres)
+                {
+                    contexto.lineTo(xpos,ypos)
+                }else
+                {
+                    contexto.moveTo(xpos,ypos)
+                }
+                contexto.stroke()
+            })
+            $('canvas').mousedown(function () { 
+                mausepres = true
+            });
+            $('canvas').mouseup(function () { 
+                mausepres = false
+            });
+        })
+    </script>
+</body>
+</html>

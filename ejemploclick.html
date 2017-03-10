@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <button class="boton">Boton 1</button>    
+    <button class="boton">Boton 2</button>    
+    <button class="boton">Boton 3</button>    
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptate beatae, nulla quo, facilis ipsum ullam dolorem esse excepturi quos enim. Hic est voluptates itaque, reprehenderit cupiditate labore vero nihil?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad unde quibusdam doloremque aut quisquam vero voluptate tempore consectetur veniam nisi ipsam hic, qui voluptatibus magnam beatae rem, eos omnis eius.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nemo facilis, tenetur, voluptatem ut expedita. Quidem odit beatae, temporibus nemo voluptatem, fugiat nisi aspernatur dolores impedit aperiam culpa, sed esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut esse accusamus, aperiam consequuntur qui necessitatibus nemo architecto enim, impedit cupiditate eaque beatae ipsum mollitia amet ex dicta nisi quaerat sunt!
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nemo facilis, tenetur, voluptatem ut expedita. Quidem odit beatae, temporibus nemo voluptatem, fugiat nisi aspernatur dolores impedit aperiam culpa, sed esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut esse accusamus, aperiam consequuntur qui necessitatibus nemo architecto enim, impedit cupiditate eaque beatae ipsum mollitia amet ex dicta nisi quaerat sunt!
+    </p>
+    <script>
+
+        $(function(){
+            $('.boton').click(function () { 
+                $(this).slideUp()
+            });
+            $('.boton').dblclick(function(){
+                    $(this).hide()
+                })
+                $('p').mouseenter(function () { 
+                    $(this).css('color', 'red');
+                });
+                $('p').mouseleave(function () { 
+                    $(this).css('color', 'black');
+                });
+        })
+    </script>
+</body>
+</html>
