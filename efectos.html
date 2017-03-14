@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Efectos jQuery</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        .caja{
+            background-color: palegreen;
+            width: 640px;
+            height: 480px;
+        }
+        .pelota{
+            background-color:  palevioletred;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%
+                    }
+        .caja, .pelota{
+            border: black solid 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de efectos en jQuery</h1>
+    <h2>Ocultar y mostrar</h2>
+    <button id="btn-ocultar">Ocultar</button>
+    <button id="btn-mostrar">Mostrar</button>
+    <button id="btn-alternar">Alternar</button>
+    <p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos in illum commodi obcaecati natus, maxime ea perferendis reiciendis omnis est, quae optio molestias vel inventore. Laborum minima iusto ad debitis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic repudiandae deserunt ad nihil error, rerum aperiam, sint delectus ratione earum placeat ab minus animi cupiditate quisquam veniam suscipit. Id, quaerat.</p>
+    <script>
+        $(function(){
+            $('#btn-oculta').click(function(){
+                $('#parrafo1').hide('slow')
+            })
+            $('#btn-mostrar').click(function(){
+                $('#parrafo1').show('slow')
+            })
+            $('#btn-alternar').click(function(){
+                $('#parrafo1').slideToggle('slow')
+            })
+            
+        })
+    </script>
+
+   
+    <h2>Fundido gradual</h2>
+    <button id="btn-desaparcer">fadeOut</button>
+    <button id="btn-aparecer">fadeIn</button>
+    <button id="btn-alternar-fundido">fadeToggle</button>
+    <button id="btn-fundido-hasta">fadeTo</button>
+    <p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos in illum commodi obcaecati natus, maxime ea perferendis reiciendis omnis est, quae optio molestias vel inventore. Laborum minima iusto ad debitis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic repudiandae deserunt ad nihil error, rerum aperiam, sint delectus ratione earum placeat ab minus animi cupiditate quisquam veniam suscipit. Id, quaerat.</p>
+    <script>
+        $(function(){
+            $('#btn-desaparcer').click(function(){
+                $('#parrafo2').fadeOut('slow')
+            })
+            $('#btn-aparecer').click(function(){
+                $('#parrafo2').fadeIn('slow')
+            })
+            $('#btn-alternar-fundido').click(function(){
+                $('#parrafo2').fadeToggle('slow')
+            })
+            $('#btn-fundido-hasta').click(function(){
+                $('#parrafo2').fadeTo('slow',0.5)
+            })
+        })
+    </script>
+
+    <h2>Deslizamiento</h2>
+    <button id="btn-deslizar-arriba">slideUp</button>
+    <button id="btn-deslizar-abajo">slideDown</button>
+    <button id="btn-deslizar-alternado">slideToggle</button>
+    <p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos in illum commodi obcaecati natus, maxime ea perferendis reiciendis omnis est, quae optio molestias vel inventore. Laborum minima iusto ad debitis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic repudiandae deserunt ad nihil error, rerum aperiam, sint delectus ratione earum placeat ab minus animi cupiditate quisquam veniam suscipit. Id, quaerat.</p>
+    
+    
+    <script>
+        $(function(){
+            $('#btn-deslizar-arriba').click(function(){
+                $('#parrafo3').slideUp('slow')
+            })
+            $('#btn-deslizar-abajo').click(function(){
+                $('#parrafo3').slideDown('slow')
+            })
+            $('#btn-deslizar-alternado').click(function(){
+                $('#parrafo3').slideToggle('slow')
+            })
+            
+        })
+    </script>
+    <h2>Animacion</h2>
+    <div class="caja">
+        <div class="pelota">
+
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.pelota').click(function(){
+                $(this).animate({
+                    // width: '100px',
+                    // height: '100px'
+                    left: '600px', top: '400px'
+                    },3000,'slow')
+            })
+        })
+    </script>
+</body>
+</html>
