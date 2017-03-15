@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo JQuery UI</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style>
+        #acordeon{
+            width: 400px;
+        }
+        .caja{
+            width: 800px;
+            height: 800px;
+            background-color: lightcoral;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de jQueryUI</h1>
+    <h2>Ejemplo de acordeon</h2>
+    <div id="acordeon">
+        <h3>Encabezado 1</h3>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt perspiciatis distinctio, eligendi sint atque odio nesciunt blanditiis quam optio aspernatur esse quidem, qui similique reprehenderit ullam? Explicabo enim a quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis maiores rem, reiciendis voluptatibus. Quo molestias laboriosam recusandae aut quae mollitia labore, error eum cumque iure, odio perspiciatis ipsam corporis inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ipsa sit a, nulla. Molestiae cum illum recusandae id pariatur eos minima, veritatis et temporibus enim laboriosam, doloribus quo corporis?
+            </p>
+        </div>
+        <h3>Encabezado 2</h3>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt perspiciatis distinctio, eligendi sint atque odio nesciunt blanditiis quam optio aspernatur esse quidem, qui similique reprehenderit ullam? Explicabo enim a quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis maiores rem, reiciendis voluptatibus. Quo molestias laboriosam recusandae aut quae mollitia labore, error eum cumque iure, odio perspiciatis ipsam corporis inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ipsa sit a, nulla. Molestiae cum illum recusandae id pariatur eos minima, veritatis et temporibus enim laboriosam, doloribus quo corporis?
+            </p>
+        </div>
+        <h3>Encabezado 3</h3>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt perspiciatis distinctio, eligendi sint atque odio nesciunt blanditiis quam optio aspernatur esse quidem, qui similique reprehenderit ullam? Explicabo enim a quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis maiores rem, reiciendis voluptatibus. Quo molestias laboriosam recusandae aut quae mollitia labore, error eum cumque iure, odio perspiciatis ipsam corporis inventore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores odit ipsa sit a, nulla. Molestiae cum illum recusandae id pariatur eos minima, veritatis et temporibus enim laboriosam, doloribus quo corporis?
+            </p>
+        </div>
+    </div>
+
+     <h2>Ejemplo de pestañas</h2>
+     <div id="pestañas">
+         <ul>
+             <li><a href="#contenido1">Pestaña 1</a></li>
+             <li><a href="#contenido2">Pestaña 2</a></li>
+             <li><a href="#contenido3">Pestaña 3</a></li>
+         </ul>
+         <div id="contenido1">
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas, non repellat ut fugiat adipisci magnam ea molestias itaque et dolorem tenetur, nobis illo voluptatem temporibus incidunt hic id eligendi! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         </div>
+         <div id="contenido2">
+             <p> ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas, non repellat ut fugiat adipisci magnam ea molestias itaque et dolorem tenetur, nobis illo voluptatem temporibus incidunt hic id eligendi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sunt, consequatur, blanditiis qui, numquam praesentium veritatis nobis nam mollitia voluptas id possimus. Eos sint optio at rerum accusamus fugit. Necessitatibus!</p>
+         </div>
+         <div id="contenido3">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptas, non repellat ut fugiat adipisci magnam ea molestias itaque et dolorem tenetur, nobis illo voluptatem temporibus incidunt hic id eligendi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sunt, consequatur, blanditiis qui, numquam praesentium veritatis nobis nam mollitia voluptas id possimus. Eos sint optio at rerum accusamus fugit. Necessitatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur asperiores assumenda necessitatibus dicta deserunt veniam, quo, maxime ipsam blanditiis incidunt odio amet debitis ipsa. Impedit, a, sequi. Harum, qui, a.</p>
+         </div>
+     </div>
+
+     <h3>Ejemplo Arrastable</h3>
+     <div class="caja" id="limite">
+        <span id="arrastrable">Arrastrame</span>
+     </div>
+     
+    <script>
+        $(function(){
+            $('#acordeon').accordion()
+            $('#pestañas').tabs()
+            $('#arrastrable').draggable({
+                containment: '#limite'
+            })
+        })
+    </script>
+</body>
+</html>
